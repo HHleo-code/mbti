@@ -3,6 +3,10 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import ShareButton from '@/components/ShareButton';
 
+export function generateStaticParams() {
+  return Object.keys(mbtiResults).map((type) => ({ type }));
+}
+
 interface Props {
   params: Promise<{ type: string }>;
 }
