@@ -1,0 +1,198 @@
+export type Dimension = 'EI' | 'SN' | 'TF' | 'JP';
+
+export interface Question {
+  id: number;
+  text: string;
+  dimension: Dimension;
+  aChoice: string;
+  bChoice: string;
+  aType: 'E' | 'S' | 'T' | 'J';
+  bType: 'I' | 'N' | 'F' | 'P';
+}
+
+export const questions: Question[] = [
+  // E/I
+  {
+    id: 1,
+    text: '주말에 친구들이랑 약속이 생겼어! 어떤 기분이야?',
+    dimension: 'EI',
+    aChoice: '신난다! 빨리 만나고 싶어 🎉',
+    bChoice: '좋긴 한데... 집에 있고 싶기도 해 😅',
+    aType: 'E',
+    bType: 'I',
+  },
+  {
+    id: 2,
+    text: '학교에서 모둠 활동을 할 때 나는?',
+    dimension: 'EI',
+    aChoice: '먼저 아이디어 내고 팀을 이끌어가는 편이야',
+    bChoice: '조용히 내 역할을 묵묵히 하는 편이야',
+    aType: 'E',
+    bType: 'I',
+  },
+  {
+    id: 3,
+    text: '에너지를 충전하는 방법은?',
+    dimension: 'EI',
+    aChoice: '친구들 만나거나 사람들과 어울리면서',
+    bChoice: '혼자 조용히 쉬거나 좋아하는 거 하면서',
+    aType: 'E',
+    bType: 'I',
+  },
+  {
+    id: 4,
+    text: '처음 만나는 친구에게 나는?',
+    dimension: 'EI',
+    aChoice: '먼저 말 걸고 친해지려고 노력해',
+    bChoice: '상대방이 먼저 다가오길 기다려',
+    aType: 'E',
+    bType: 'I',
+  },
+  {
+    id: 5,
+    text: '오늘 학교에서 엄청 힘든 일이 있었어. 어떻게 풀어?',
+    dimension: 'EI',
+    aChoice: '친구한테 전화해서 다 털어놓아',
+    bChoice: '혼자 생각 정리하고 일기 쓰거나 음악 들어',
+    aType: 'E',
+    bType: 'I',
+  },
+  // S/N
+  {
+    id: 6,
+    text: '새로운 카페에 갔을 때 뭐가 먼저 눈에 띄어?',
+    dimension: 'SN',
+    aChoice: '메뉴 가격, 인테리어, 테이블 배치 같은 것들',
+    bChoice: '전체적인 분위기나 느낌, 여기서 뭘 하면 좋을지',
+    aType: 'S',
+    bType: 'N',
+  },
+  {
+    id: 7,
+    text: '수업 시간에 선생님 설명을 들을 때 나는?',
+    dimension: 'SN',
+    aChoice: '핵심 내용을 정확히 이해하고 외우는 게 중요해',
+    bChoice: '큰 흐름이나 "왜 그런지" 이해하는 게 더 좋아',
+    aType: 'S',
+    bType: 'N',
+  },
+  {
+    id: 8,
+    text: '미래에 대해 생각할 때 나는?',
+    dimension: 'SN',
+    aChoice: '지금 당장 해야 할 것들에 더 집중해',
+    bChoice: '나중에 어떻게 될지 상상하는 걸 즐겨',
+    aType: 'S',
+    bType: 'N',
+  },
+  {
+    id: 9,
+    text: '친구한테 길을 알려줄 때 나는?',
+    dimension: 'SN',
+    aChoice: '"○○ 빌딩에서 오른쪽으로 50m" 처럼 구체적으로',
+    bChoice: '"대충 거기 쪽으로 가다 보면 나와" 처럼 감으로',
+    aType: 'S',
+    bType: 'N',
+  },
+  {
+    id: 10,
+    text: '책이나 영화를 고를 때 나는?',
+    dimension: 'SN',
+    aChoice: '실제 이야기나 현실적인 내용이 좋아',
+    bChoice: '판타지, SF 같은 상상력 넘치는 게 좋아',
+    aType: 'S',
+    bType: 'N',
+  },
+  // T/F
+  {
+    id: 11,
+    text: '친구가 고민을 털어놓을 때 나는?',
+    dimension: 'TF',
+    aChoice: '문제를 해결할 방법을 찾아줘',
+    bChoice: '일단 "많이 힘들었겠다"며 공감해줘',
+    aType: 'T',
+    bType: 'F',
+  },
+  {
+    id: 12,
+    text: '모둠에서 의견이 충돌할 때 나는?',
+    dimension: 'TF',
+    aChoice: '어떤 의견이 더 논리적으로 맞는지 따져봐',
+    bChoice: '모두가 상처받지 않게 분위기를 맞춰봐',
+    aType: 'T',
+    bType: 'F',
+  },
+  {
+    id: 13,
+    text: '선생님에게 피드백을 받을 때 나는?',
+    dimension: 'TF',
+    aChoice: '날카롭더라도 정확한 피드백이 더 도움돼',
+    bChoice: '좋은 점도 함께 말해줘야 힘이 나',
+    aType: 'T',
+    bType: 'F',
+  },
+  {
+    id: 14,
+    text: '영화를 보고 나서 나는?',
+    dimension: 'TF',
+    aChoice: '스토리 구성이나 논리적 허점을 분석해',
+    bChoice: '인물들의 감정에 공감하며 여운에 빠져있어',
+    aType: 'T',
+    bType: 'F',
+  },
+  {
+    id: 15,
+    text: '결정을 내릴 때 나는?',
+    dimension: 'TF',
+    aChoice: '감정보다 사실과 근거를 더 중요하게 생각해',
+    bChoice: '내 마음이 가는 대로, 느낌이 중요해',
+    aType: 'T',
+    bType: 'F',
+  },
+  // J/P
+  {
+    id: 16,
+    text: '시험이 2주 뒤야. 나는?',
+    dimension: 'JP',
+    aChoice: '지금 바로 공부 계획 세우고 시작해',
+    bChoice: '일단 놀다가 나중에 집중해서 해도 돼',
+    aType: 'J',
+    bType: 'P',
+  },
+  {
+    id: 17,
+    text: '방 청소할 때 나는?',
+    dimension: 'JP',
+    aChoice: '구역별로 정해서 깔끔하게 정리해',
+    bChoice: '눈에 보이는 것부터 자유롭게 치워',
+    aType: 'J',
+    bType: 'P',
+  },
+  {
+    id: 18,
+    text: '친구들이랑 여행 계획을 세울 때 나는?',
+    dimension: 'JP',
+    aChoice: '숙소, 일정, 교통 미리 다 정해야 마음이 편해',
+    bChoice: '큰 방향만 정하고 현지에서 즉흥적으로 즐겨',
+    aType: 'J',
+    bType: 'P',
+  },
+  {
+    id: 19,
+    text: '숙제 마감이 내일이야. 나는?',
+    dimension: 'JP',
+    aChoice: '이미 다 해놨어 (또는 오늘 바로 할 거야)',
+    bChoice: '오늘 밤에 몰아서 할 거야, 그게 더 잘 돼',
+    aType: 'J',
+    bType: 'P',
+  },
+  {
+    id: 20,
+    text: '하루 일과가 어떨 때 더 편해?',
+    dimension: 'JP',
+    aChoice: '할 일 목록이 있고 계획대로 움직일 때',
+    bChoice: '그날그날 기분에 따라 자유롭게 지낼 때',
+    aType: 'J',
+    bType: 'P',
+  },
+];
